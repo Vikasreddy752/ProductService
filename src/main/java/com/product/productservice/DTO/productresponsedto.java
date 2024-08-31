@@ -11,6 +11,6 @@ public class productresponsedto {
     private String description;
     private double price;
     private String image;
-    private String Category ;
+    private String category ;
 
 }

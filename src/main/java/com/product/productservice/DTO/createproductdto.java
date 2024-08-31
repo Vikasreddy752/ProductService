@@ -10,6 +10,8 @@ public class createproductdto {
     private String description;
     private String  price;
     private String image;
-    private String Category ;
+    private String category ;
+
+
 
 }

@@ -1,6 +1,8 @@
 package com.product.productservice.Model;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -20,7 +22,8 @@ public class Products extends Basemodel implements Serializable {
     private String description;
     private double price;
     private String Image;
-    private String category;
+    //private String category;
 
-    //private Category category;
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    private Category category;
 }

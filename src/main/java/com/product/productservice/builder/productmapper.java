@@ -15,7 +15,7 @@ public  class productmapper {
         dto.setDescription(pr.getDescription());
         dto.setImage(pr.getImage());
         dto.setPrice(pr.getPrice());
-        dto.setCategory(pr.getCategory());
+      //  dto.setCategory(pr.getCategory());
 
         return dto;
     }
@@ -24,7 +24,7 @@ public  class productmapper {
         //Category cr = new Category();
        // cr.setTitle(dto.getCategory());//for category
 
-        pr.setCategory(dto.getCategory());
+       // pr.setCategory(dto.getCategory());
         pr.setId(dto.getId());
         pr.setTitle(dto.getTitle());
         pr.setDescription(dto.getDescription());

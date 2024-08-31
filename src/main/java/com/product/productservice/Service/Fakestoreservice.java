@@ -98,13 +98,13 @@ public class Fakestoreservice implements Productservice{
        Fakestoreproductdto requestbody = new Fakestoreproductdto();
        requestbody.setTitle(tittle);
        requestbody.setDescription(descreption);
-       requestbody.setCategory(category);
-       requestbody.setPrice(price);
+        requestbody.setCategory(category);
+        requestbody.setPrice(price);
 
-       Fakestoreproductdto response
-       =restTemplate.patchForObject("http://fakestoreapi.com/products/"+id,requestbody,Fakestoreproductdto.class);
+        Fakestoreproductdto response
+                = restTemplate.patchForObject("http://fakestoreapi.com/products/" + id, requestbody, Fakestoreproductdto.class);
 
-       Products products = mapper.toproduct(response);
-       return products;
+        Products products = mapper.toproduct(response);
+        return products;
     }
 }
