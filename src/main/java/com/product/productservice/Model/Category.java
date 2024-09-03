@@ -7,7 +7,6 @@ import jakarta.persistence.OneToMany;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 import java.io.Serializable;
 import java.util.List;
@@ -21,6 +20,6 @@ public class Category extends Basemodel implements Serializable {
 
     @JsonIgnore
     @OneToMany(mappedBy = "category",cascade = CascadeType.REMOVE)
-    List<Products> products;
+    List<Product> products;
 
 }

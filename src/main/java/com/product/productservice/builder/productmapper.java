@@ -2,25 +2,24 @@ package com.product.productservice.builder;
 
 import com.product.productservice.DTO.Fakestoreproductdto;
 import com.product.productservice.DTO.productresponsedto;
-import com.product.productservice.Model.Category;
-import com.product.productservice.Model.Products;
+import com.product.productservice.Model.Product;
 import org.springframework.stereotype.Component;
 
 @Component
 public  class productmapper {
-    public productresponsedto convertoproductresponsedto(Products pr){
+    public productresponsedto convertoproductresponsedto(Product pr){
         productresponsedto dto = new productresponsedto();
-      //  dto.setId(pr.getId());
+        dto.setId(pr.getId());
         dto.setTitle((pr.getTitle()));
         dto.setDescription(pr.getDescription());
         dto.setImage(pr.getImage());
         dto.setPrice(pr.getPrice());
-      //  dto.setCategory(pr.getCategory());
+        dto.setCategory(pr.getCategory().getTitle());
 
         return dto;
     }
-    public  Products toproduct(Fakestoreproductdto dto) {
-        Products pr = new Products();
+    public Product toproduct(Fakestoreproductdto dto) {
+        Product pr = new Product();
         //Category cr = new Category();
        // cr.setTitle(dto.getCategory());//for category
 

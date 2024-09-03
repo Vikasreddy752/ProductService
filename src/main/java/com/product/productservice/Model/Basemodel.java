@@ -23,7 +23,7 @@ public class Basemodel implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 
-    private int id;
+    private Integer id;
     private Date createdAt;
     private Date updatedAt;
     private boolean deleted;

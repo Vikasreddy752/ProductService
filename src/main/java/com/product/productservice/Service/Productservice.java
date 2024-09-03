@@ -1,6 +1,6 @@
 package com.product.productservice.Service;
 
-import com.product.productservice.Model.Products;
+import com.product.productservice.Model.Product;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -8,9 +8,9 @@ import java.util.List;
 @Service
 public interface Productservice {
 
-    public Products getproductbyid(Integer id);
-    public  Products createproduct(String tittle,String descreption,String image, String price,String category);
-    public List<Products> getallproducts();
-    public Products deleteproductbyid(int id);
-    public Products updateproductbyid(int id,String tittle,String descreption,String image, String price,String category);
+    public Product getproductbyid(Integer id);
+    public Product createproduct(String tittle, String descreption, String image, String price, String category);
+    public List<Product> getallproducts();
+    public Product deleteproductbyid(int id);
+    public Product updateproductbyid(int id, String tittle, String descreption, String image, String price, String category);
 }
