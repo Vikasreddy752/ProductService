@@ -24,7 +24,17 @@ public class Productcontroller {
         this.mapper = mapper;
     }
 
-    
+    @PostMapping("/product")
+    public productresponsedto creatproduct(@RequestBody createproductdto dto) {
+
+        //1.calling service layer by passing parameters
+        Product pr = svc.createproduct(dto.getTitle(),
+                dto.getDescription(),
+                dto.getImage(),
+                dto.getPrice(),
+                dto.getCategory());
+        return mapper.convertoproductresponsedto(pr);
+    }
 
     @GetMapping("/product/{id}")
     public productresponsedto getproductbyid(@PathVariable("id") Integer id)
